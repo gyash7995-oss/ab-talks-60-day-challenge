@@ -259,8 +259,9 @@ export default function DashboardPage({
                 }
 
                 return (
-                  <div
+                  <button
                     key={d.day}
+                    type="button"
                     style={{
                       aspectRatio: '1',
                       borderRadius: '3px',
@@ -268,8 +269,13 @@ export default function DashboardPage({
                       border: dotBorder,
                       cursor: d.status === 'locked' ? 'not-allowed' : 'pointer',
                       transition: 'all 0.15s ease',
+                      padding: 0,
+                      margin: 0,
+                      outline: 'none',
                     }}
                     title={titleLabel}
+                    aria-label={titleLabel}
+                    disabled={d.status === 'locked'}
                     onClick={() => {
                       if (d.status !== 'locked') {
                         navigate(`/day/${d.day}`);
@@ -346,37 +352,7 @@ export default function DashboardPage({
 
       </section>
 
-      {/* STATE SIMULATION CONTROLS WIDGET */}
-      <section 
-        className="glass-card" 
-        style={{
-          border: '1px dashed var(--border)',
-          background: 'rgba(255, 255, 255, 0.01)',
-          padding: '16px'
-        }}
-      >
-        <h4 style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>
-          Student State Sandbox
-        </h4>
-        <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '12px' }}>
-          Test mandatory product edge-states (First Day: 0 streak, Missed Day info, Empty Profile).
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-          <button className="btn btn-secondary" style={{ fontSize: '0.7rem', padding: '8px' }} onClick={handleResetStreak}>
-            Simulate 0-Streak (First Day)
-          </button>
-          <button className="btn btn-secondary" style={{ fontSize: '0.7rem', padding: '8px' }} onClick={handleSimulateEmptyProfile}>
-            Simulate Empty Profile
-          </button>
-          <button 
-            className="btn btn-primary" 
-            style={{ fontSize: '0.7rem', padding: '8px', gridColumn: 'span 2', background: 'rgba(6, 182, 212, 0.1)', color: 'var(--primary)', border: '1px solid rgba(6, 182, 212, 0.3)', boxShadow: 'none' }} 
-            onClick={handleRestoreProfile}
-          >
-            Restore Default Arjun Profile (10d Streak)
-          </button>
-        </div>
-      </section>
+
 
     </div>
   );
