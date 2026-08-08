@@ -32,7 +32,7 @@ export default function TaskCard({ dayData, onStartChallenge, trackName }) {
       <div 
         style={{
           display: 'flex',
-          justifyContent: 'between',
+          justifyContent: 'space-between',
           alignItems: 'center',
           width: '100%',
           marginBottom: '14px',
