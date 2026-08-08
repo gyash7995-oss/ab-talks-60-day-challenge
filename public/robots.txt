@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /dashboard
+Allow: /day/12
+
+Sitemap: https://abtalks-challenge.vercel.app/sitemap.xml
