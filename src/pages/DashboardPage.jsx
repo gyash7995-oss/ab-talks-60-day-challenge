@@ -32,34 +32,7 @@ export default function DashboardPage({
     }));
   };
 
-  // State Simulation Handlers
-  const handleResetStreak = () => {
-    setStudentInfo(prev => ({
-      ...prev,
-      streak: 0,
-      longestStreak: 0,
-      points: 0
-    }));
-  };
 
-  const handleSimulateEmptyProfile = () => {
-    setStudentInfo(prev => ({
-      ...prev,
-      name: '',
-      college: ''
-    }));
-  };
-
-  const handleRestoreProfile = () => {
-    setStudentInfo(prev => ({
-      ...prev,
-      name: 'Arjun Sharma',
-      college: 'Indian Institute of Technology, Delhi',
-      streak: 10,
-      longestStreak: 10,
-      points: 1450
-    }));
-  };
 
   return (
     <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -77,34 +50,12 @@ export default function DashboardPage({
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div>
-            {studentInfo.name ? (
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 800 }}>{studentInfo.name}</h2>
-            ) : (
-              <div 
-                style={{ 
-                  height: '24px', 
-                  width: '160px', 
-                  background: 'rgba(255, 255, 255, 0.06)', 
-                  borderRadius: '6px', 
-                  marginBottom: '4px' 
-                }} 
-                aria-label="Empty Profile Placeholder"
-              />
-            )}
-            
-            {studentInfo.college ? (
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>{studentInfo.college}</p>
-            ) : (
-              <div 
-                style={{ 
-                  height: '16px', 
-                  width: '240px', 
-                  background: 'rgba(255, 255, 255, 0.04)', 
-                  borderRadius: '4px' 
-                }} 
-                aria-label="Empty Profile Subtext Placeholder"
-              />
-            )}
+            <h2 style={{ fontSize: '1.2rem', fontWeight: 800 }}>
+              {studentInfo.name || "Student Participant"}
+            </h2>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+              {studentInfo.college || "60-Day Challenge Cohort"}
+            </p>
           </div>
           
           {/* Track Selector Dropdown */}

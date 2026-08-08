@@ -56,7 +56,7 @@ export default function LandingPage({ studentInfo, setStudentInfo, tracks, onSta
             padding: '0 8px'
           }}
         >
-          Build a daily coding habit, share public proof of work, and get noticed by recruiters. No excuses. Just consistency.
+          Build a daily coding habit, share public proof of work, and showcase your consistent learning progress. No excuses. Just consistency.
         </p>
 
         {/* Highlighted Metric Grid */}
