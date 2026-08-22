@@ -1,6 +1,7 @@
 # AB Talks — 60-Day Coding Challenge
 
-A mobile-first student experience designed for the **AB Talks 60-Day Coding Challenge** as part of the **AB Hackathon Vibe Coded**.
+A mobile-first student experience designed for the **AB Talks 60-Day Coding Challenge** as part of the **AB Hackathon VIBE CODED
+**.
 
 ## Hackathon Brief
 
