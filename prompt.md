@@ -2,17 +2,9 @@
 I am participating in the AB Talks 60-Day Coding Challenge.
 I have carefully read the complete challenge requirements. Please create a strong and clear prompt for Google Antigravity based on those requirements.
 
-The project must include exactly these three screens:
+The design must be mobile-first, with **390px as the main target**
 
-- `/` — Landing Page
-- `/dashboard` — Student Dashboard
-- `/day/12` — Challenge Day
-
-The design must be mobile-first, with **390px as the main target**, because the project will be checked on a mobile viewport.
-
-Please act as an expert UI/UX designer and make the visual and layout decisions yourself. The design should be modern, clean, simple, motivating, lightweight and professional. Use 3D or visual effects only when they improve the experience and do not make the website slow.
-
-The prompt should follow the challenge requirements exactly and should not add unnecessary features or sections.
+Please act as an expert UI/UX designer and make the visual and layout decisions yourself. The design should be modern, clean, simple, motivating, lightweight and professional. Use 3D or visual effects only when they improve the experience and do not make the website slow. The design should center on three core views: the landing page, the student dashboard, and the challenge day.
 
 It should also include:
 Responsive design , Good typography and spacing
@@ -21,10 +13,6 @@ Basic SEO
 Meta title and description
 Proper heading structure
 Image alt text
-Open Graph and Twitter Card tags
-Favicon
-`robots.txt`
-`sitemap.xml`
 Proper structured data
 Fast loading and optimized assets
 Clean and maintainable code
@@ -34,9 +22,7 @@ Vercel deployment support
 Direct access and refresh support for all three required routes
 
 The project should use realistic mock data because authentication, real accounts and a production database are out of scope.
-
 Please also make sure the required edge cases are handled, including a first day with no streak, a missed day and an empty profile.
-
 Before generating the final prompt, carefully review all the challenge requirements and make sure nothing important is missed.
 
 # PROMPT :
@@ -115,7 +101,6 @@ Build exactly these three primary experiences.
 
 ## ROUTE 1
 
-`/`
 
 ### Landing Page
 
@@ -133,8 +118,6 @@ for the student to understand the challenge and feel ready to commit to 60 days.
 
 ## ROUTE 2
 
-`/dashboard`
-
 ### Student Dashboard
 
 The home screen after entering the challenge.
@@ -150,8 +133,6 @@ Include:
 ---
 
 ## ROUTE 3
-
-`/day/12`
 
 ### Challenge Day
 
